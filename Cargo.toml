@@ -1,8 +1,14 @@
 [package]
+edition = "2018"
 name = "tact"
 version = "0.1.0"
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+actix-web = "3"
+dotenv = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+
+[dependencies.rusqlite]
+features = ["bundled"]
+version = "0.24.1"
