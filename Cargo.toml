@@ -4,6 +4,7 @@ name = "tact"
 version = "0.1.0"
 [dependencies]
 actix-web = "3"
+config = "*"
 dotenv = "*"
 serde = "*"
 serde_derive = "*"

@@ -1,10 +1,21 @@
 mod models;
 mod handlers;
 
-use actix_web::{ web, App, HttpServer }; 
+use actix_web::{ web, App, HttpServer, HttpResponse }; 
 use std::io::Result;
 use std::env;
 use dotenv::dotenv;
+use serde::Serialize;
+use rusqlite::*;
+
+#[derive(Serialize)]
+struct Article {
+    id: i64,
+    title: String,
+    author: String,
+    created_at: String,
+    body: String,
+}
 
 #[actix_web::main]
 async fn main() -> Result<()> {

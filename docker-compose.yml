@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWARD: tactdb
+      POSTGRES_USER: tactdb
+      POSTGRES_DB: tactdb
+    ports:
+      - 5432:5432
+    deploy:
+      resources:
+        limits:
+          memory: '512M'
+          cpus: '1'
